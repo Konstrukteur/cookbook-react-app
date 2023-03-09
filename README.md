@@ -6,7 +6,7 @@ The goal of this project is to write a simple react implementation of dynamicaly
 
 The main functional requirements are to use an API, asynchronous code, Contentfull, React-Router and deployment to gh=pages.
 
-The implementation of this website can be viewed [here](https://konstrukteur.github.io/hacker-news-react/)
+The implementation of this website can be viewed [here](https://konstrukteur.github.io/cookbook-react-app/)
 
 ![initial design](design.png)
 
