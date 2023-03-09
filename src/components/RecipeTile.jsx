@@ -1,8 +1,8 @@
-import { Routes, Route, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 const RecipeTile = ({ recipe }) => {
   return (
     <div className='col-12 col-md-6 py-3'>
-      <NavLink path='/recipies/:recipieId'>
+      <NavLink to={`/recipes/${recipe.uniqueId}`}>
         <div
           style={{ backgroundImage: `url(${recipe.images[0][1]})` }}
           id='homus-image1'

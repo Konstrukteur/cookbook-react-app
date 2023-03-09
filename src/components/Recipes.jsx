@@ -6,8 +6,8 @@ const Recipes = ({ recipes }) => {
       {recipes.map((recipe) => (
         <RecipeTile
           key={recipe.uniqueId}
-          recipe={recipe}
           id={recipe.uniqueId}
+          recipe={recipe}
         />
       ))}
     </div>

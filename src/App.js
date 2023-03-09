@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route, Switch } from "react-router-dom";
+import { Routes, Route } from "react-router-dom";
 import { useState, useEffect } from "react";
 // import * as contentful from "contentful";
 import Recipes from "./components/Recipes";
@@ -15,6 +15,7 @@ const App = () => {
 
   useEffect(() => {
     getRecipes().then((entries) => {
+      console.log(entries);
       setRecipes(entries);
     });
   }, []);
@@ -26,7 +27,9 @@ const App = () => {
         <Title />
         <Routes>
           <Route path='/' element={<Recipes recipes={recipes} />} />
-          <Route path='/recipes/:Id' element={<Recipe recipes={recipes} />} />
+          <Route path='/recipes' element={<Recipe recipes={recipes} />}>
+            <Route path=':uniqueId' element={<Recipe recipes={recipes} />} />
+          </Route>
         </Routes>
       </main>
       <Footer />
@@ -35,3 +38,5 @@ const App = () => {
 };
 
 export default App;
+
+// /recipes/3sTZhEMGs5pSJlyym0mxU3
