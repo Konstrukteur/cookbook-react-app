@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import { useActionData } from "react-router-dom";
 import RecipeTile from "./RecipeTile";
 import Title from "./Title";
 
@@ -23,14 +22,7 @@ const Recipes = ({ recipes }) => {
 
   return (
     <>
-      <Title />
-      <input
-        type='text'
-        value={searchTerm}
-        onChange={(event) => {
-          setSearchTerm(event.target.value);
-        }}
-      ></input>
+      <Title searchTerm={searchTerm} setSearchTerm={setSearchTerm} />
       <div className='row'>
         {filteredRecipes.map((recipe) => (
           <RecipeTile

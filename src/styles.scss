@@ -1,4 +1,7 @@
 /* GLOBAL CSS */
+* {
+  box-sizing: border-box;
+}
 h1 {
   font-size: 1.8em;
 }
@@ -66,43 +69,19 @@ has to be applied togehter with the id */
   background-repeat: no-repeat;
 }
 
-/* Puttanesca Recipe Start */
-/* #puttanesca-image01 {
-  background-image: url("../images/pasta_alla_puttanesca_03.jpg");
-}
-#puttanesca-image02 {
-  background-image: url("../images/pasta_alla_puttanesca_01.jpg");
-}
-#puttanesca-image03 {
-  background-image: url("../images/pasta_alla_puttanesca_02.jpg");
-} */
 
-/* Carbonara Recipe Start */
-/* #carbonara-image01 {
-  background-image: url("../images/carbonara1.jpg");
+.navigation {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid black;
+  padding-bottom: 1em;
+  margin: 0 12px 1em 12px;
 }
-#carbonara-image02 {
-  background-image: url("../images/carbonara2.jpg");
-} */
+.page-title {
+  flex: 1 1 auto;
+  margin-left: -12px;
+}
+.search {
+  margin-right: -12px;
 
-/* Lebanese Recipe Start */
-/* #homus-image1 {
-  background-image: url("../images/homus1.jpg");
 }
-#homus-image2 {
-  background-image: url("../images/Hummus2.webp");
-}
-#homus-image3 {
-  background-image: url("../images/homus3.jpg");
-} */
-
-/* Indian Recipe Start */
-// #recipe-image1 {
-//   background-image: url({recipe.images[0][1]});
-// }
-// #recipe-image2 {
-//   background-image: url({recipe.images[0][1]});
-// }
-// #recipe-image3 {
-//   background-image: url({recipe.images[0][1]});
-// }
