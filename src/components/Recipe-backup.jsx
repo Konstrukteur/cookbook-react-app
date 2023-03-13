@@ -1,5 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
+import CarouselButton from "./CarouselButton";
+import CarouselSlide from "./CarouselSlide";
 
 const Recipe = ({ getRecipes }) => {
   const title = useParams();
@@ -11,6 +13,7 @@ const Recipe = ({ getRecipes }) => {
       const recipe = await recipes.find((entry) => {
         return entry.title == title.id;
       });
+      console.log(recipe.images);
       setRecipe(recipe);
     } catch (error) {
       console.error(error);
@@ -43,22 +46,35 @@ const Recipe = ({ getRecipes }) => {
               <div className='carousel-indicators'>
                 {recipe &&
                   recipe.images.map((image, index) => {
-                    return (
-                      <button
-                        key={image[1]}
-                        type='button'
-                        data-bs-target='#recipeAlbum'
-                        data-bs-slide-to={index}
-                        className='active'
-                        aria-current='true'
-                        aria-label={`Slide ${index + 1}`}
-                      ></button>
-                    );
+                    <CarouselButton image={image} index={index} />;
                   })}
               </div>
               <div className='carousel-inner'>
                 {recipe &&
                   recipe.images.map((image, index) => {
+                    // <CarouselSlide
+                    //   image={image}
+                    //   index={index}
+                    //   recipe={recipe}
+                    // />;
+                    // return (
+                    //   <div
+                    //     className={`carousel-item ${
+                    //       index == 0 ? "active" : ""
+                    //     }`}
+                    //     key={image[1]}
+                    //   >
+                    //     <div
+                    //       id={`image${index}`}
+                    //       style={{ backgroundImage: `url(${image[1]})` }}
+                    //       className='d-block w-100 carousel-image-container'
+                    //     ></div>
+                    //     <div className='carousel-caption d-none d-md-block'>
+                    //       <h5>{recipe.title}</h5>
+                    //       <p>Tomatoes, olives and anchovies is all it takes.</p>
+                    //     </div>
+                    //   </div>
+                    // );
                     return index == 0 ? (
                       <div className='carousel-item active' key={image[1]}>
                         <div

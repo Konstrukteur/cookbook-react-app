@@ -1,6 +1,6 @@
 {
   "name": "cookbook-headless-app",
-  "homepage": "http://konstrukteur.github.io/cookbook-react-app",
+  "homepage": "http://konstrukteur.github.io/cookbook-react-app/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
